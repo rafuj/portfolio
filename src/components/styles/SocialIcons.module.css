@@ -62,3 +62,22 @@
 .banner__social__icons li a i[class*="pinterest"] {
   color: #007bb5;
 }
+
+@media screen and (max-width: 500px) {
+  .banner__social__icons {
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .banner__social__icons li {
+    width: 22px;
+  }
+
+  .banner__social__icons::after,
+  .banner__social__icons::before {
+    width: 20px;
+    height: 2px;
+    margin: 0;
+    top: 10px;
+  }
+}
