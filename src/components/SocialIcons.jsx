@@ -11,7 +11,7 @@ export default function SocialIcons({ bannerPage }) {
       className={
         bannerPage
           ? `${classes.banner__social__icons}`
-          : "social__icons justify-content-end"
+          : "social__icons justify-content-md-end justify-content-center"
       }
     >
       <SocialLink

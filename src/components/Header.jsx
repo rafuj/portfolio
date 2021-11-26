@@ -13,6 +13,11 @@ export default function Header() {
       setMenu(true);
     }
   }
+  function menuToggleMobile() {
+    if (window.innerWidth < 768) {
+      menuToggle();
+    }
+  }
   function stickyHeader() {
     if (document.documentElement.scrollTop > 0) {
       setSticky(true);
@@ -32,13 +37,19 @@ export default function Header() {
           <div className="menu-area">
             <ul className={`menu ${menu ? "active" : ""}`}>
               <li>
-                <Link to="/">Home</Link>
+                <Link to="/" onClick={menuToggleMobile}>
+                  Home
+                </Link>
               </li>
               <li>
-                <Link to="/clients">Testimonials</Link>
+                <Link to="/clients" onClick={menuToggleMobile}>
+                  Testimonials
+                </Link>
               </li>
               <li>
-                <Link to="/project">Projects</Link>
+                <Link to="/project" onClick={menuToggleMobile}>
+                  Projects
+                </Link>
               </li>
             </ul>
             <div
