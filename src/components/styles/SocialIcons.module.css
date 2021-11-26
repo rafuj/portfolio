@@ -1,0 +1,64 @@
+.banner__social__icons {
+  width: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+.banner__social__icons::before,
+.banner__social__icons::after {
+  content: "";
+  display: block;
+  width: 2px;
+  height: 40px;
+  background: #fff;
+}
+
+.banner__social__icons::after {
+  margin-top: 20px;
+}
+
+.banner__social__icons::before {
+  margin-bottom: 20px;
+}
+
+.banner__social__icons li {
+  width: 30px;
+  margin: 2px 5px;
+  padding: 0;
+}
+
+.banner__social__icons li {
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.banner__social__icons li img {
+  width: 100%;
+}
+
+.banner__social__icons li a i[class*="facebook"] {
+  color: #3b5998;
+}
+
+.banner__social__icons li a i[class*="twitter"] {
+  color: #55acee;
+}
+
+.banner__social__icons li a i[class*="instagram"] {
+  color: #e4405f;
+}
+
+.banner__social__icons li a i[class*="linkedin"] {
+  color: #007bb5;
+}
+
+.banner__social__icons li a i[class*="youtube"] {
+  color: #cd201f;
+}
+
+.banner__social__icons li a i[class*="pinterest"] {
+  color: #007bb5;
+}

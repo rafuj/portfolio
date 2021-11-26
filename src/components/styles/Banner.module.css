@@ -1,0 +1,122 @@
+/*Banner*/
+.bannerThumb {
+  height: 100%;
+}
+
+.bannerThumb {
+  height: 100%;
+}
+
+.bannerThumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: bottom center;
+}
+
+@media (min-width: 1200px) {
+  .bannerThumb {
+    clip-path: polygon(0 0, 100% 0, calc(100% - 70px) 100%, 0% 100%);
+  }
+}
+
+.banner__content {
+  padding: 150px 20px 150px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.banner__content .banner__content__cate {
+  margin-bottom: 20px;
+}
+
+.banner__content .banner__content__cate::before {
+  content: "";
+  width: 55px;
+  height: 2px;
+  display: inline-block;
+  background: #fa983a;
+  margin-right: 10px;
+}
+
+.banner__content .banner__content__title {
+  margin: 0;
+}
+
+.banner__content .banner__text {
+  max-width: 680px;
+  font-size: 36px;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.banner__content .banner__content__content {
+  padding-right: 30px;
+  max-width: 680px;
+  width: calc(100% - 30px);
+}
+
+@media (min-width: 1200px) {
+  .banner__content {
+    min-height: 100vh;
+  }
+}
+
+@media (max-width: 991px) {
+  .banner__content {
+    padding: 200px 20px 100px;
+  }
+}
+
+@media (max-width: 767px) {
+  .banner__content .banner__content__title {
+    font-size: 65px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .banner__content .banner__content__title {
+    font-size: 50px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .banner__content {
+    padding: 200px 15px 80px;
+  }
+
+  .banner__content .banner__content__content {
+    width: 100%;
+    padding: 0 0 20px;
+  }
+
+  .banner__content .banner__content__title {
+    font-size: 40px;
+  }
+
+  .banner__content .banner__social__icons {
+    width: 100%;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .banner__content .banner__social__icons::after,
+  .banner__content .banner__social__icons::before {
+    width: 20px;
+    height: 2px;
+    margin: 0;
+  }
+}
+
+@media (max-width: 991px) {
+  .bannerThumb {
+    background: #313552 !important;
+  }
+
+  .bannerThumb .thumb {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+}
