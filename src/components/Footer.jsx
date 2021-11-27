@@ -59,13 +59,11 @@ export default function Footer() {
                 <ul className="contact__information">
                   <li>
                     <span className="subtitle">WhatsApp</span>
-                    <Link to="Tel:+880 1707592756">+880 1707592756</Link>
+                    <span className="info">+880 1707592756</span>
                   </li>
                   <li>
                     <span className="subtitle">Email</span>
-                    <Link to="Mailto:raihanrafuj9978@gmail.com">
-                      raihanrafuj9978@gmail.com
-                    </Link>
+                    <span className="info">raihanrafuj9978@gmail.com</span>
                   </li>
                   <li>
                     <span className="subtitle">Address</span>
