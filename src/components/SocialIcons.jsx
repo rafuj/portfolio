@@ -19,7 +19,7 @@ export default function SocialIcons({ bannerPage }) {
         icon={facebook}
       ></SocialLink>
       <SocialLink
-        link="https:/api.whatsapp.com/send?phone=+8801707592756&text=Welcome Brother, This is Abu Raihan Rafuj"
+        link="https://api.whatsapp.com/send?phone=+8801707592756&text=Welcome Brother, This is Abu Raihan Rafuj"
         icon={whatsapp}
       ></SocialLink>
       <SocialLink
