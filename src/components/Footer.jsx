@@ -1,10 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import usePorjects from "../hooks/usePorjects";
 import Logo from "./Logo";
 import ProjectLinks from "./ProjectLinks";
 import SocialIcons from "./SocialIcons";
 import classes from "./styles/Footer.module.css";
 export default function Footer() {
+  const { loading, error, projects } = usePorjects();
+
   return (
     <footer className="footer-section">
       <div className="footer-top pt-120 pb-120">
@@ -26,30 +29,22 @@ export default function Footer() {
               <div className="footer__widget">
                 <h5 className="widget__title">Latest Projects</h5>
                 <ul className={classes.latestProject}>
-                  <ProjectLinks
-                    link="https://pixner.net/mosto"
-                    title="Mosto - app landing page"
-                  />
-                  <ProjectLinks
-                    link="http://brotherslab.thesoftking.com/html/arohyip/"
-                    title="Arohyip - HYIP Investment Business HTML Template"
-                  />
-                  <ProjectLinks
-                    link="https://themeforest.net/item/hyipland-hyip-investment-html-template/25892443?s_rank=23"
-                    title="Hyipland - HYIP Investment HTML Template"
-                  />
-                  <ProjectLinks
-                    link="https://themeforest.net/item/boleto-online-ticket-booking-website-html-template/25691030?s_rank=25"
-                    title="Boleto - Online Ticket Booking Website HTML Template"
-                  />
-                  <ProjectLinks
-                    link="https://thesoftking.com/html/gymio/"
-                    title="Gymio - Fitness and Gym HTML Template"
-                  />
-                  <ProjectLinks
-                    link="http://idealbrothers.thesoftking.com/html/webino/"
-                    title="Webino - Webinar Landing Page HTML Template"
-                  />
+                  {error && <div>Something went wrong</div>}
+                  {loading && <div>Loading</div>}
+                  {!loading && projects.length === 0 && (
+                    <div>No Data Found</div>
+                  )}
+                  {!loading &&
+                    projects.length > 0 &&
+                    projects
+                      .slice(0, 7)
+                      .map((project) => (
+                        <ProjectLinks
+                          key={project.id}
+                          link={project.links}
+                          title={project.title}
+                        />
+                      ))}
                 </ul>
               </div>
             </div>
