@@ -36,13 +36,15 @@ export default function Footer() {
                   )}
                   {!loading &&
                     projects.length > 0 &&
-                    projects.map((project) => (
-                      <ProjectLinks
-                        key={project.id}
-                        link={project.links}
-                        title={project.title}
-                      />
-                    ))}
+                    projects
+                      .slice(0, 7)
+                      .map((project) => (
+                        <ProjectLinks
+                          key={project.id}
+                          link={project.links}
+                          title={project.title}
+                        />
+                      ))}
                 </ul>
               </div>
             </div>
