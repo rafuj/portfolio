@@ -16,8 +16,6 @@ export default function Projects({ bg }) {
         txt="Magni, modi autem velit deserunt cum libero blanditiis quibusdam officia non illum, nemo maiores, quae neque rerum!"
       />
       <div className="row g-4 justify-content-center">
-        {!loading && projects.length === 0 && <div>No Data Available Here</div>}
-        {error && <div>Something Went Wrong Please Try Again</div>}
         {!loading &&
           projects.length > 0 &&
           projects.map((project) => (
@@ -28,6 +26,9 @@ export default function Projects({ bg }) {
               title={project.title}
             />
           ))}
+        {!loading && projects.length === 0 && <div>No Data Available Here</div>}
+        {loading && <div>Loading</div>}
+        {error && <div>Something Went Wrong Please Try Again</div>}
       </div>
     </Section>
   );

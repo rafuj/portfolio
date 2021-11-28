@@ -23,7 +23,6 @@ export default function usePorjects() {
           });
         }
       } catch (err) {
-        console.log(err);
         setError(true);
         setLoading(false);
       }
